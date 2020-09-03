@@ -1,71 +1,29 @@
-# new-project-template
-A template repo for new CL projects
+Courtlistener Disclosure Extractor
+==================================
 
-{{NEW-PROJECT}}
-=========
+Courtlistener disclosure extractor is an open source repository to 
+maintain, disclosure-extractor in a docker image for use in Courtlistener.com
 
-{{NEW-PROJECT}} is an open source repository to ...
-It was built for use with Courtlistener.com.
-
-Its main goal is to ...
-It incldues mechanisms to ...
-
-Further development is intended and all contributors, corrections and additions are welcome.
+Further development is intended and all contributors, corrections and 
+additions are welcome.
 
 Background
 ==========
 
-Free Law Project built this ...  This project represents ...  
-We believe to be the ....
+Free Law Project built this to help extract out data from roughly 18k financial
+records. These records are available for a limited period from the US Government
+before they are destroyed.  In an effort to review roughly 20 years of records we needed
+a method to extract out the information at a high degree of accuracy.
 
-Quickstart
-===========
+We use this docker image inside courtlistener.
 
-You can feed in a X as ... .. ... 
+Deployment to Docker
+====================
+##Updates
 
-::
+1.  Update tags.
 
-        IMPORTS
-
-        CALL EXAMPLE
-
-        returns:
-          ""EXAMPLE OUTPUT
-
-
-
-Some Notes ...
-======================
-Somethings to keep in mind as ....
-
-1. ...
-2. ...
-
-
-Fields
-======
-
-1. :code:`id` ==> string; Courtlistener Court Identifier
-2. :code:`court_url` ==> string; url for court website
-3. :code:`regex` ==>  array; regexes patterns to find courts
-
-
-Installation
-============
-
-Installing {{NEW-PROJECT}} is easy.
-
-    ::
-
-        pip install {{NEW-PROJECT}}
-
-
-Or install the latest dev version from github
-
-    ::
-
-        pip install git+https://github.com/freelawproject/{{NEW-PROJECT}}.git@master
-
+2.  Commit to master
 
 
 Future
@@ -73,29 +31,6 @@ Future
 
 1) Continue to improve ...
 2) Future updates
-
-Deployment
-==========
-
-If you wish to create a new version manually, the process is:
-
-1. Update version info in ``setup.py``
-
-2. Install the requirements in requirements_dev.txt
-
-3. Set up a config file at ~/.pypirc
-
-4. Generate a universal distribution that worksin py2 and py3 (see setup.cfg)
-
-    ::
-
-        python setup.py sdist bdist_wheel
-
-5. Upload the distributions
-
-    ::
-
-        twine upload dist/* -r pypi (or pypitest)
 
 
 
