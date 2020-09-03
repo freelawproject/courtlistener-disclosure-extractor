@@ -20,7 +20,7 @@ We use this docker image inside courtlistener.
 Deployment to Docker
 ====================
 
-1.  Update version number in hooks/version.txt
+1.  Update DOCKER_TAG in hooks/post_push
 
 2.  Commit to master
 
