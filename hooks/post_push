@@ -2,12 +2,14 @@
 
 set -e
 
+DOCKER_TAG = $(shell cat version.txt)
+
 # Parse image name for repo name
 tagStart=$(expr index "$IMAGE_NAME" :)
 repoName=${IMAGE_NAME:0:tagStart-1}
 
 # Tag and push image for each additional tag
-for tag in {0.0.4,latest}; do
+for tag in {DOCKER_TAG,latest}; do
     docker tag $IMAGE_NAME ${repoName}:${tag}
     docker push ${repoName}:${tag}
 done

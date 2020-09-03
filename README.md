@@ -19,12 +19,15 @@ We use this docker image inside courtlistener.
 
 Deployment to Docker
 ====================
-##Updates
 
-1.  Update tags.
+1.  Update version number in hooks/version.txt
 
 2.  Commit to master
 
+
+The post_push is required to generate both latest and version numbering 
+in our builds.  If no version number is updated, any commit to master will 
+overwrite the latest docker image. 
 
 Future
 =======
