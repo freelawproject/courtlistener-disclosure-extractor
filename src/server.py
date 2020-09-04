@@ -32,4 +32,5 @@ def disclosure_url():
         return {"success": False, "msg": "Complete failure"}
 
 
-app.run(host="0.0.0.0", port=5001)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
